@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-
+npm install
 cd frontend-adman
+npm install
 ng build --prod
 cd ../backend-adman
+npm install
 rm -rf dist
 mkdir dist
 cd dist
