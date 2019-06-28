@@ -1,0 +1,16 @@
+<button style="margin-bottom: 20px;" [routerLink]="['/usersList']">Regresar al Listado</button>
+
+<div *ngIf="user && user.first_name">
+  <h1># {{user.id}}</h1>
+  <div style="display:flex;">
+    <img style="width: 30%; border-radius: 25px;" [src]="user.avatar">
+    <div style="width: 50%;margin-left:1rem;">
+      <p style="font-size: 2rem;">{{user.first_name}} {{user.last_name}}</p>
+      <p style="font-size: 1.4rem;">Contacto: <span style="font-weight: bold;">{{user.email}}</span></p>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!user">
+  <h1>El usuario no fue encontrado en la base de datos.</h1>
+</div>

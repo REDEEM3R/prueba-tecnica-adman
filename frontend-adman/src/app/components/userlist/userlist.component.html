@@ -1,0 +1,13 @@
+<div class="content-wrapper">
+  <h1>Listado de Usuarios</h1>
+  <div class="users-container" *ngIf="users && users.length > 0">
+    <div class="userRow" *ngFor="let user of users">
+      <img (click)="seeDetails(user.id)" [src]="user.avatar">
+      <p class="info-brief">{{user.first_name}} {{user.last_name}}</p>
+    </div>
+  </div>
+
+  <div *ngIf="!users">
+    <p>No se encontraron usuarios</p>
+  </div>
+</div>

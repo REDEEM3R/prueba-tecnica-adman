@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-cd front-end-app
+cd frontend-adman
 ng build --prod
 cd ../backend-adman
 rm -rf dist
 mkdir dist
 cd dist
-mkdir front-end-app
+mkdir frontend-adman
 cd ../../
-cp -a front-end-app/dist/front-end-app/. backend-adman/dist/front-end-app
+cp -a frontend-adman/dist/front-end-app/. backend-adman/dist/front-end-app
 cd backend-adman
 node server.js
